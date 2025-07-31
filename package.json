@@ -19,6 +19,7 @@
         "vite": "^6.2.4"
     },
     "dependencies": {
+        "toastr": "^2.1.4",
         "tom-select": "^2.4.3"
     }
 }
