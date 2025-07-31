@@ -19,11 +19,11 @@
 
         <x-sidebar.dropdown icon="edit" text="Cadastros">
             <x-sidebar.item
-                :active="request()->routeIs('employes.index')"
+                :active="request()->routeIs('employees.index')"
                 text="Funcionários"
                 :badge="null"
                 icon="user-tie"
-                :route="route('employes.index')"
+                :route="route('employees.index')"
             />
             <x-sidebar.item
                 text="Dentistas"

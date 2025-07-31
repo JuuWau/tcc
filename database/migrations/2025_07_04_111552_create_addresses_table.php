@@ -16,10 +16,12 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('neighborhood')->nullable();
             $table->char('number', length: 20)->nullable();
-            $table->char('cep', length: 8)->nullable();
+            $table->char('extra_info', length: 60)->nullable();
+            $table->char('cep', length: 9)->nullable();
             $table->char('city', length: 20)->nullable();
             $table->char('state', length: 20)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

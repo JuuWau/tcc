@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->date('birth_date')->nullable();
-            $table->char('cpf', length: 11)->unique()->nullable();
+            $table->char('cpf', length: 14)->unique()->nullable();
             $table->string('email')->unique();
             $table->unsignedBigInteger('permission_id')->after('id');
             $table->unsignedBigInteger('address_id')->after('permission_id')->nullable();
@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('permission_id')
                 ->references('id')
